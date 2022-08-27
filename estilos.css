@@ -1,0 +1,24 @@
+body {
+    font-family: 'Gentium Plus Compact', Times, serif;
+    color:rgb(56, 12, 12);
+    background-color: cornsilk;
+    margin: 50px;
+}
+
+h1 {
+    color: white;
+    background-color: rgb(67, 20, 20);
+    padding: 30px 30px 20px 30px;
+}
+
+p {
+    margin: 0px 0px 10px 0px;
+}
+
+pre {
+    font-family: 'Ubuntu Mono', monospace;
+    color: rgb(183, 86, 83);
+    margin: 0px;
+    font-weight: bold;
+    margin: 0px;
+}

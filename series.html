@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Series</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <py-env>
+      - numpy
+      - matplotlib
+    </py-env>
+  </head>
+  <body>
+
+    <h1>Series en streaming 2022</h1>
+
+    <py-script>
+
+      import matplotlib.pyplot as plt
+      import numpy as np
+
+
+      labels = ['Ms. Marvel',
+                  'Stranger\nThings',
+                  'House of\nthe Dragon',
+                  'She-Hulk\nAttorney\nat Law',
+                  'Obi-Wan\nKenobi']
+      media_tomatoes = [98, 91, 83, 88, 80]
+      media_imdb = [62, 87, 89, 52, 71]
+
+      x = np.arange(len(labels))
+      width = 0.4
+
+      fig, ax = plt.subplots()
+      rects1 = ax.bar(x - width/2, media_tomatoes, width,
+          label='RT', color='red')
+      rects2 = ax.bar(x + width/2, media_imdb, width,
+          label='IMDB', color='gold')
+
+      ax.set_ylabel('Puntaje')
+      ax.set_title('Calificación de series en streaming 2022')
+      ax.set_xticks(x, labels)
+      ax.legend()
+
+      ax.bar_label(rects1, padding=3)
+      ax.bar_label(rects2, padding=3)
+
+      fig.tight_layout()
+
+      fig
+    </py-script>
+
+  </body>
+</html>
